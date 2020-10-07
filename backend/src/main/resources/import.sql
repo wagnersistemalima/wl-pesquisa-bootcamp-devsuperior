@@ -1,0 +1,10 @@
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Maria', '111.222.333-11', 900.00, 1);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Joao', '111.222.333-11', 800.00, 2);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Ana', '111.222.333-11', 1000.00, 3);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Pedro', '111.222.333-11', 1100.00, 2);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Karol', '111.222.333-11', 2000.00, 1);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Antonio', '111.222.333-11', 500.00, 1);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Gabriela', '111.222.333-11', 850.00, 4);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Rodrigo', '111.222.333-11', 970.00, 3);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Kely', '111.222.333-11', 1075.00, 2);
+INSERT INTO tb_client (name, cpf, income, children) VALUES ('Carlos', '111.222.333-11', 3500.00, 5);
