@@ -7,12 +7,15 @@ import java.util.stream.Collectors;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sistemalima.wlpesquisa.dto.ClientDTO;
 import com.sistemalima.wlpesquisa.entities.Client;
 import com.sistemalima.wlpesquisa.repositories.ClientRepository;
+import com.sistemalima.wlpesquisa.services.exceptions.DatabaseException;
 import com.sistemalima.wlpesquisa.services.exceptions.ResourceNotFoundException;
 
 @Service
@@ -70,7 +73,19 @@ public class ClientService {
 				
 		}
 		catch (EntityNotFoundException e) {
-			throw new ResourceNotFoundException("Id not found" + id);
+			throw new ResourceNotFoundException("Id not found " + id);
+		}
+	}
+
+	public void delete(Long id) {
+		try {
+			repository.deleteById(id);
+		}
+		catch (EmptyResultDataAccessException e) {                    // se o id não existir
+			throw new ResourceNotFoundException("Id not found " + id);
+		}
+		catch (DataIntegrityViolationException e) { // tentar deletar um recurso que pode gerar inconsistencia
+			throw new DatabaseException("Integrity violation"); 
 		}
 	}
 
