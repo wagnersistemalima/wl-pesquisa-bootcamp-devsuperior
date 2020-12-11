@@ -2,7 +2,7 @@
  :hammer_and_wrench: Capitulo de um projeto com Spring-Boot do Bootcamp devsuperior, desafio para fazer um crud completo de web services Rest para acessar um recurso de clientes, o projeto deverá estar em um ambiente de teste configurado acessando o banco de dados H2.
 
 
-## Trabalho final do capítulo
+## Trabalho final do capítulo.  Status = Concluido!
 
 # Enunciado do trabalho
 
